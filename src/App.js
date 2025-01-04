@@ -8,8 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        xin chào tôi là link
-        <MyComponent></MyComponent>
+               <MyComponent></MyComponent>
       </div>
     );
   }
