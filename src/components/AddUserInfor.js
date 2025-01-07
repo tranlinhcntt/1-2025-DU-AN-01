@@ -1,10 +1,10 @@
 import React from "react";
 
-class UserInfor extends React.Component {
+class AddUserInfor extends React.Component {
   state = {
-    name: " Trần Link ",
-    address: "Nghệ An ",
-    age: 35,
+    name: " ",
+    address: " ",
+    age: "",
   };
 
   handleOnChangeInput = (event) => {  
@@ -23,6 +23,11 @@ class UserInfor extends React.Component {
     //ngăn chặn cái việc reload lại trang
     event.preventDefault();
     console.log(this.state);
+    this.props.handleAddNewUser({
+      id: Math.floor((Math.random()*100)+1) + '-random',
+      name: this.state.name,
+      age: this.state.age
+    })
   };
 
   render() {
@@ -57,4 +62,4 @@ class UserInfor extends React.Component {
   }
 }
 
-export default UserInfor;
+export default AddUserInfor;
